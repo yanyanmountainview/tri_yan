@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+"""
+if DEBUG:
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_only')
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+    STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(BASE_DIR), 'static', 'static'),
+    )
+"""
+
+if DEBUG:
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_only')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+    STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static', 'static'),
+    )
