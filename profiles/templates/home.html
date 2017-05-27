@@ -1,14 +1,26 @@
 {% extends 'base.html' %}
 
-{% block body_block %}
+{% block style %}
+<style >
+.jumbotron {
+  text-align: center;
+}
 
-<h1>Hello world!</h1>
+</style>
+
 
 {% endblock %}
 
 
-{% block block_two %}
+{% block jumbotron %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <h1>Theme example</h1>
+  <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+</div>
+{% endblock %}
 
-<h2>Hello</h2>
 
+{% block content %}
+<h1>Hello world!</h1>
 {% endblock %}
